@@ -1,0 +1,14 @@
+<% include partials/header2 %>
+<div class="ui main text container segment">
+	<div class="ui huge header" id="dase2">BOOKS</div>
+	
+	<% for(var i=0;i<booklist.length;i++ ){  %>
+	<li> <a href="/books2/<%= userlist[i] %>" > <%=booklist[i]%> </a> </li>
+	<%};%> 
+
+
+	
+
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<div class="ui main text container segment" id="dase4">
+    <div class="ui huge header centred"><%= log.contributor %></div>
+    <div class="ui top attached " id="dase5">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= log.image %>" >
+            
+            <div class="description" id="dase8">
+                <%log.lists.forEach(function(book){%>
+                	<li><%= book.title %>
+                <%});%>
+                
+            </div>
+            <div>
+            	Contact: <%= log.phone %>
+            </div>
+            <div>
+            	Email: <%= log.email %>
+            </div>
+
+             <a class="ui orange basic button" id="dase6" href="/books/<%= log._id %>/edit">Edit</a>
+             <form id="delete" action="/books/<%= log._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button" id="dase7" >Delete</button>
+            </form>
+           
+        </div>
+    </div>
+    
+</div>
+
+<% include partials/footer %>

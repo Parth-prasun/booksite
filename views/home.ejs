@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header" id="dase2">BIBLIOPHILES</div>
+    <div class="ui top  attached segment" id="dase3">
+        <div class="ui divided items">
+            <% logs.forEach(function(log){ %>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= log.image %>" >
+                    </div>
+                    <div class="content">
+                         <a class="header" href="/logs/<%= log._id %>"><%=log.contributor%></a>
+                         <div>   genre: <%= log.genre %>  </div>
+                         <div class="extra">
+                             <a class="ui floated basic violet button" href="/books/<%= log._id %>">
+                                 check books
+                                 <i class="right chevron icon"></i>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+
+<% include partials/footer %>

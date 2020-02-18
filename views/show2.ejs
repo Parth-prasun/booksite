@@ -1,0 +1,25 @@
+<% include partials/header2 %>
+
+<div class="ui main text container segment" id="dase4">
+    <div class="ui huge header centred"><%= log.contributor %></div>
+    <div class="ui top attached " id="dase5">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= log.image %>" >
+            
+            <div class="description" id="dase8">
+                <%log.lists.forEach(function(book){%>
+                	<li><%= book.title %>
+                <%});%>
+                
+            </div>
+            <div>
+            	Contact: <%= log.phone %>
+            </div>
+            <div>
+            	Email: <%= log.email %>
+            
+    </div>
+    
+</div>
+
+<% include partials/footer %>
